@@ -1,0 +1,27 @@
+Este projeto foi feito com base no projeto de compilador de linguagem c Tiny C, ele foi clonado do repositório:
+origin  https://github.com/absop/Tinycc.git (fetch)
+origin  https://github.com/absop/Tinycc.git (push)
+
+Obs: Possuo um repositório clone desse repositório em meu guthub pessoal:
+
+https://github.com/sebastiaofortes/tiny_c_clone
+
+Após a clonagem foram feitas modificações no código.
+
+Arquivos e linhas editadas por mim:
+
+Arquivo: tcctok.h
+
+75  DEF(TOK_DEFINE_PORT, "definir")
+77 DEF(TOK_INCLUDE_PORT, "incluir")
+
+Arquivo: tccpp.c
+
+1358 case TOK_DEFINE_PORT:
+1370 case TOK_INCLUDE_PORT:
+
+// Eu utilizo a estratégia de deixar os cases em portugol logo abaixo dos cases em c para o compilador aplicar a condição do swtchs da linguagem c também para os switchs de portugol assim as palavras em portugol tem o mesmo efeito das palavras em c na hora do pré-processamento.
+
+Arquivo:port.h
+Adicionei a biblioteca port.h ao diretório win32/include.
+

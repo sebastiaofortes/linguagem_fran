@@ -1,0 +1,22 @@
+A linguagem é desenvolvida adicionando palavras em portugol ao preprocessador de c.
+O preprocessador utiliza switch-case para analisar as palavras do código. 
+Para rodar o portugol eu adiciono case's adicionais ao código do preprocessador de forma que eles atuam da mesma forma que os cases criados para a linguagem c.
+Para tanto basta colocar o case em portugol juntamente com o case em c para ambos terem a mesma finamlidade
+
+Ex:
+// arquivo tcctok.c
+     DEF(TOK_DEFINE, "define")
+     DEF(TOK_DEFINE_PORT, "definir")
+     DEF(TOK_INCLUDE, "include")
+     DEF(TOK_INCLUDE_PORT, "incluir")
+// arquivo tccpp.c
+.
+.
+.
+case TOK_DEFINE:
+case TOK_DEFINE_PORT:
+.
+.
+.
+case TOK_INCLUDE_PORT:        
+case TOK_INCLUDE:
