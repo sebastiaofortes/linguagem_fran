@@ -1556,6 +1556,7 @@ ST_FUNC void preprocess(int is_bof)
 redo:
     switch (tok) {
         case TOK_DEFINE:
+	case TOK_DEFINE_PORT:
             pp_debug_tok = tok;
             next_nomacro();
             pp_debug_symv = tok;
@@ -1570,6 +1571,7 @@ redo:
             if (s) define_undef(s);
             break;
         case TOK_INCLUDE:
+	case TOK_INCLUDE_PORT:
         case TOK_INCLUDE_NEXT:
             ch = file->buf_ptr[0];
             /* XXX: incorrect if comments : use next_nomacro with a special mode */
